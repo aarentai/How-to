@@ -35,11 +35,6 @@
 - designated files to local repo
     `git commit [file1] [file2] -m [remark]`
 
-## Push Your Modification
-> push file from local repo(HEAD) to remote repo(MASTER)
-    `git push origin master`
-
-
 ### config
 - current repo
  `git config -e`
@@ -50,3 +45,10 @@
 git config --global user.name "test"
 git config --global user.email test@outlook.com
 ```
+
+### reset
+`git reset`
+
+## Push Your Modification
+> push file from local repo(HEAD) to remote repo(MASTER)
+    `git push origin master`
