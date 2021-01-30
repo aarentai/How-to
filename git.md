@@ -12,6 +12,7 @@ file from working directory to staging area(INDEX)
    - `git add [file1] [file2]`
    - `git add <directory>`
    - `git add .`
+> REMARK: SAVE FILE BEFORE ADD
 
 - **COMMIT** 
 file from staging area(INDEX) to local repo(HEAD)
@@ -21,7 +22,6 @@ file from staging area(INDEX) to local repo(HEAD)
 - **PUSH** 
 your modification to remote
    - `git push origin master`
-> REMARK: SAVE FILE BEFORE ADD
 ----
 
 - **CONFIG**
@@ -40,3 +40,13 @@ the modification
 - **DIFF** 
 files between working directory and staging area(INDEX)
    - `git diff [file]`
+----
+### …or push an existing repository from the command line
+```
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/aarentai/Atlas2D.git
+git branch -M main
+git push -u origin main
+```
