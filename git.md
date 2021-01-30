@@ -1,3 +1,32 @@
+## Clone an existing repo from github and edit locally
+```
+git clone git@github.com:aarentai/How-to.git
+# add or edit the files
+git add [file]/<directory>/.
+git commit [file]/<directory>/ -m "comment"
+git push origin main
+```
+----
+## ...or initialize a repo locally then push to github
+```
+git init [repo]
+# add or edit the files
+git add [file]/<directory>/.
+git commit [file]/<directory>/ -m "comment"
+git push origin main
+```
+----
+## …or push an existing repo from the command line
+```
+# enter the directory
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/aarentai/Atlas2D.git
+git branch -M main
+git push -u origin main
+```
+----
 - **INIT**
    - `git init repo_name`
 
@@ -22,7 +51,6 @@ file from staging area(INDEX) to local repo(HEAD)
 - **PUSH** 
 your modification to remote
    - `git push origin master`
-----
 
 - **CONFIG**
    - `git config -e`
@@ -40,13 +68,3 @@ the modification
 - **DIFF** 
 files between working directory and staging area(INDEX)
    - `git diff [file]`
-----
-### …or push an existing repository from the command line
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin https://github.com/aarentai/Atlas2D.git
-git branch -M main
-git push -u origin main
-```
