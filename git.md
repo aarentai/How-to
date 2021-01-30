@@ -1,8 +1,8 @@
 # Create a Repo
-## init
+## **init**
 - `git init repo_name`
 
-## clone
+## **clone**
 - `git clone /path/to/repository <directory>`  
 - `git clone https://github.com/aarentai/How-to.git <directory>`
 - `git clone git@github.com:aarentai/How-to.git <directory>`
