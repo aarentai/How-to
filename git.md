@@ -50,7 +50,7 @@ file from staging area(INDEX) to local repo(HEAD)
 
 - **PUSH** 
 your modification to remote
-   - `git push origin master`
+   - `git push origin main`
 
 - **CONFIG**
    - `git config -e`
