@@ -1,0 +1,66 @@
+### Print working directory
+```
+pwd
+```
+### Show all files under directory
+```
+ls
+ls -a  # will show the hidden files
+ls -al # will list the files and directories with detailed information like the permissions, size, owner, etc.
+ls -R  # will list all the files in the sub-directories as well
+```
+### Load directory
+```
+cd <directory>
+cd .. # move one directory up
+cd    # to go straight to the home folder
+cd-   # move to your previous directory
+```
+### Edit directory
+```
+mkdir <directory>
+rmdir <directory> # only empty directory
+```
+### Delete files and directories
+```
+rm [file]/<directory>
+rm -r # only want to delete the directory
+```
+### Super user do 
+```
+sudo
+```
+### Download files from the internet 
+```
+wget <link>
+```
+### Manual about command
+```
+man cd # which ways the cd can be used
+```
+### Copy
+```
+cp [file] <directory>
+```
+### Move
+```
+mv [file] <directory>
+mv [file] [file] # rename a file
+```
+### Change permissions
+```
+chmod [option] [file]
+chmod u=rwx,g=rx,o=r myfile
+chmod 754 myfile
+```
+>u: "user", g: "group", and o: "other"
+>
+>r: "read", w: "write", and x: "execute"
+>
+> Here the digits 7, 5, and 4 each individually represent the permissions for the user, group, and others, in that order. Each digit is a combination of the numbers 4, 2, 1, and 0:
+>
+>4: "read", 2: "write", 1: "execute", 0: "no permission"
+### Connect remote server
+```
+ssh username@server
+```
