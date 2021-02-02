@@ -1,8 +1,4 @@
-### Print working directory
-```
-pwd
-```
-### Show all files under directory
+### Show files
 ```
 ls
 ls -a  # will show the hidden files
@@ -15,6 +11,23 @@ cd <directory>
 cd .. # move one directory up
 cd    # to go straight to the home folder
 cd-   # move to your previous directory
+```
+### Edit file
+```
+vim [file]
+```
+### Copy
+```
+cp [file] <directory>
+```
+### Move
+```
+mv [file] <directory>
+mv [file] [file] # rename a file
+```
+### Print working directory
+```
+pwd
 ```
 ### Edit directory
 ```
@@ -38,15 +51,6 @@ wget <link>
 ```
 man cd # which ways the cd can be used
 ```
-### Copy
-```
-cp [file] <directory>
-```
-### Move
-```
-mv [file] <directory>
-mv [file] [file] # rename a file
-```
 ### Change permissions
 ```
 chmod [option] [file]
@@ -63,4 +67,14 @@ chmod 754 myfile
 ### Connect remote server
 ```
 ssh username@server
+```
+### Run a single .c file
+```
+gcc assignment1.c -o assignment1
+./assignment1
+```
+### Run a makefile
+```
+make
+./tester
 ```
