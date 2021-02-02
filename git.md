@@ -26,6 +26,12 @@ git remote add origin https://github.com/aarentai/Atlas2D.git
 git branch -M main
 git push -u origin main
 ```
+## or delete a file from repo and push
+```
+git rm [file]
+git commit -m ""
+git push
+```
 ----
 - **INIT**
    - `git init repo_name`
