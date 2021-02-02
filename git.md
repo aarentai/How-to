@@ -32,6 +32,12 @@ git rm [file]
 git commit -m ""
 git push
 ```
+## or rename a file from repo and push
+```
+git mv [oldfile] [newfile]
+git commit -m ""
+git push origin main
+```
 ----
 - **INIT**
    - `git init repo_name`
