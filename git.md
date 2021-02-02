@@ -7,7 +7,7 @@ git commit [file]/<directory>/ -m "comment"
 git push origin main
 ```
 ----
-## ...or initialize a repo locally then push to github
+## or initialize a repo locally then push to github
 ```
 git init [repo]
 # add or edit the files
