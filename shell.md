@@ -69,6 +69,10 @@ chmod 754 myfile
 ssh hdai@cibcgpu1.sci.utah.edu
 ssh -Y u1265496@lab1-35.eng.utah.edu
 ```
+### Run a python .py file
+```
+python3 cky.py [arg]
+```
 ### Run a single .c file
 ```
 gcc assignment1.c -o assignment1
