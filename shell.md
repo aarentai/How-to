@@ -66,7 +66,8 @@ chmod 754 myfile
 >4: "read", 2: "write", 1: "execute", 0: "no permission"
 ### Connect remote server
 ```
-ssh username@server
+ssh hdai@cibcgpu1.sci.utah.edu
+ssh -Y u1265496@lab1-35.eng.utah.edu
 ```
 ### Run a single .c file
 ```
