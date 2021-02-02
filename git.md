@@ -16,7 +16,7 @@ git commit [file]/<directory>/ -m "comment"
 git push origin main
 ```
 ----
-## …or push an existing repo from the command line
+## or push an existing repo from the command line
 ```
 # enter the directory
 git init
