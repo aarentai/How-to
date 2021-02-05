@@ -36,14 +36,18 @@ c.NotebookApp.port                  = 9999
 c.ConnectionFileMixin.ip            = '0.0.0.0'
 ```
 4. Save it and type `jupyter notebook` in terminal to make the configure file updated.
-5. Open terminal 1 enter instructions below
+5. Open terminal 1 and enter instructions below
 ```
 ssh hdai@cibcgpu1.sci.utah.edu
 jupyter notebook
 ```
-6. Open terminal 2 enter instruction below
+6. Open terminal 2 and enter instruction below
 ```
 ssh hdai@cibcgpu1.sci.utah.edu -L 127.0.0.1:1234:0.0.0.0:9999
+```
+7. Open browser and go to
+```
+http://localhost:1234/
 ```
 
 
