@@ -18,4 +18,4 @@
 
 ## Run local Python project in remote server by PyCharm
 1. Make sure your PyCharm is professional version
-2. `File->Setting->Project->Python Interpreter->Add python interpreter->SSH interpreter->New server configuration`
+2. `File`->`Setting`->`Project`->`Python Interpreter`->`Add python interpreter`->`SSH interpreter`->`New server configuration`
