@@ -1,12 +1,12 @@
-## Run .c in remote server by VS Code
+## Run C project in remote server by VS Code
 1. `ctrl`+`shift`+`p`
 2. Select `Remote SSH: Connect to Host`
 3. Enter password
 4. Open folder
 5. Edit
-6. Run
+6. Run by gcc
 
-## Run python project in remote server by VS Code
+## Run Python project in remote server by VS Code
 1. `ctrl`+`shift`+`p`
 2. Select `Remote SSH: Connect to Host`
 3. Enter password
