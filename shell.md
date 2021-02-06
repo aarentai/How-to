@@ -47,6 +47,14 @@ sudo
 ```
 wget <link>
 ```
+### Uncompress files
+```
+tar     -xvf    *.tar
+tar     -xzvf   *.tar.gz/*tgz
+gzip    -d      *.gz
+unrar   e       *.rar
+unzip           *.zip
+```
 ### Manual about command
 ```
 man cd # which ways the cd can be used
