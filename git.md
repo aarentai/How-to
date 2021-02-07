@@ -16,7 +16,7 @@ git commit [file]/<directory>/ -m "comment"
 git push origin main
 ```
 ----
-## or push an existing repo from the command line
+## or push an local repo to github
 ```
 # enter the directory
 git init
@@ -59,6 +59,9 @@ file from working directory to staging area(INDEX)
 file from staging area(INDEX) to local repo(HEAD)
    -  `git commit -m [remark]`
    -  `git commit [file1] [file2] -m [remark]`
+
+- **BRANCH**
+
 
 - **PUSH** 
 your modification to remote
