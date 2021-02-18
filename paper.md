@@ -1,5 +1,6 @@
 ## Introduction
  - Problem definition
+ - Intro to the disease, imaging method, our approach, our innovation
  - Previous methods and their limits
  - Briefly states your new methods which overcomes ...
 ## Related Work
