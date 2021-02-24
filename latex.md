@@ -18,8 +18,8 @@
 | verbatim      | Provides a comment environment                                                   |
 
 ## pgfplots
-# Plot functions
-'''
+### Plot functions
+```
 \begin{tikzpicture}
 \begin{axis}[axis lines = left, xlabel = $x$, ylabel = {$f(x)$}]
 
@@ -31,11 +31,11 @@
 
 \end{axis}
 \end{tikzpicture}
-'''
+```
 ![func](https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/43/Pgfplots4.png)
 
-# Plot data
-'''
+### Plot data
+```
 \begin{tikzpicture}
 \begin{axis}[
     title={Temperature dependence of CuSO$_4\cdot$5H$_2$O solubility},
@@ -56,5 +56,5 @@
     
 \end{axis}
 \end{tikzpicture}
-'''
+```
 ![data](https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/54/Pgfplots2.png)
