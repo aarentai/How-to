@@ -1,3 +1,8 @@
+# [logging](https://docs.python.org/3/library/logging.html)
+```
+logging.info("\n%s", report)
+```
+
 # [subprocess](https://docs.python.org/3/library/subprocess.html)
 The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
 
@@ -21,6 +26,27 @@ Return a list of path names that match pattern.
 ['2.txt', 'sub/3.txt']
 >>> glob.glob('./**/', recursive=True)
 ['./', './sub/']
+```
+
+# [argparse](https://docs.python.org/3/library/argparse.html)
+The `argparse` module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of `sys.argv`.
+
+```
+import argparse
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('--theta', 
+                    default   = None, 
+                    type      = int, 
+                    required  = True,
+                    help      = 'value of theta'
+                    )
+parser.add_argument('--train', 
+                    action    = 'store_true'
+                    help      = 'whether to train or not'
+                    )
+
+args = parser.parse_args()
 ```
 
 # [os](https://docs.python.org/3/library/os.html)
@@ -54,6 +80,7 @@ FLAGS = flags.FLAGS
 # Flag names are globally defined!  So in general, we need to be
 # careful to pick names that are unlikely to be used by other libraries.
 # If there is a conflict, we'll get an error at import time.
+
 # flags.DEFINE_*('argv_name', default value, discription)
 flags.DEFINE_string('name', 'Jane Random', 'Your name.')
 flags.DEFINE_integer('age', None, 'Your age in years.', lower_bound=0)
