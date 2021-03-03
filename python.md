@@ -39,6 +39,20 @@ if not expression:
   raise AssertionError
 ```
 
+# list
+`extend` vs `append`
+```
+a1 = [1, 2]
+a2 = [1, 2]
+b = (3, 4)
+
+# a1 = [1, 2, 3, 4]
+a1.extend(b) 
+
+# a2 = [1, 2, (3, 4)]
+a2.append(b)
+```
+
 # [logging](https://docs.python.org/3/library/logging.html)
 ```
 logging.info("\n%s", report)
