@@ -1,22 +1,42 @@
 # [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
-## `try` and `except`
+## `try`, `except`, `else`, `finally`
 The try statement works as follows.
-- First, the try clause (the statement(s) between the try and except keywords) is executed.
-- If no exception occurs, the except clause is skipped and execution of the try statement is finished.
-- If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the except keyword, the except clause is executed, and then execution continues after the try statement.
-- If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above.
+- First, the `try` clause (the statement(s) between the `try` and `except` keywords) is executed.
+- If no exception occurs, then goes to `else`
+- If an exception occurs, then goes to `except`. If its type matches the exception named after the `except` keyword, the `except` clause is executed, and then execution continues after the try statement.
+- Whether exception occurs or not, it will finally goes to `finally`.
 ```
 try:
   x = int(input("Please enter a number: "))
   break
 except ValueError as error:
-  pass # In Python programming, the pass statement is a null statement. Nothing happens when the pass is executed.
+  pass 
+else:
+  pass
+finally:
+  pass
+```
+## `pass`
+In Python programming, the pass statement is a null statement. Nothing happens when the pass is executed.
+```
+for i in xrange(1000): 
+  pass
 ```
 ## `raise`
 ```
 def functionName( level ):
     if level < 1:
         raise Exception("Invalid level!", level)
+```
+## `assert`
+When the expression is False, trigger the exceptions.
+```
+assert expression
+```
+is equivalent to
+```
+if not expression:
+  raise AssertionError
 ```
 
 # [logging](https://docs.python.org/3/library/logging.html)
