@@ -1,5 +1,5 @@
 # [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
-## `try`, `except`, `else`, `finally`
+### `try`, `except`, `else`, `finally`
 The try statement works as follows.
 - First, the `try` clause (the statement(s) between the `try` and `except` keywords) is executed.
 - If no exception occurs, then goes to `else`
@@ -16,19 +16,19 @@ else:
 finally:
   pass
 ```
-## `pass`
+### `pass`
 In Python programming, the pass statement is a null statement. Nothing happens when the pass is executed.
 ```
 for i in xrange(1000): 
   pass
 ```
-## `raise`
+### `raise`
 ```
 def functionName( level ):
     if level < 1:
         raise Exception("Invalid level!", level)
 ```
-## `assert`
+### `assert`
 When the expression is False, trigger the exceptions.
 ```
 assert expression
@@ -40,7 +40,7 @@ if not expression:
 ```
 
 # list
-`extend` vs `append`
+### `extend` vs `append`
 ```
 a1 = [1, 2]
 a2 = [1, 2]
