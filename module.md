@@ -1,3 +1,24 @@
+# [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
+## `try` and `except`
+The try statement works as follows.
+- First, the try clause (the statement(s) between the try and except keywords) is executed.
+- If no exception occurs, the except clause is skipped and execution of the try statement is finished.
+- If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the except keyword, the except clause is executed, and then execution continues after the try statement.
+- If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above.
+```
+try:
+  x = int(input("Please enter a number: "))
+  break
+except ValueError as error:
+  pass # In Python programming, the pass statement is a null statement. Nothing happens when the pass is executed.
+```
+## `raise`
+```
+def functionName( level ):
+    if level < 1:
+        raise Exception("Invalid level!", level)
+```
+
 # [logging](https://docs.python.org/3/library/logging.html)
 ```
 logging.info("\n%s", report)
@@ -8,7 +29,8 @@ The subprocess module allows you to spawn new processes, connect to their input/
 
 ```
 import subprocess
-subprocess.run(["pip3","install","--user","pydicom"])
+subprocess.run(["pip3","install","--user","pydicom"])   # -- for word
+subprocess.run(["pip3","install","-u","pydicom"])       # - for letter
 ```
 
 # [glob](https://docs.python.org/3/library/glob.html)
