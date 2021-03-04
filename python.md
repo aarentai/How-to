@@ -40,7 +40,7 @@ if not expression:
 ```
 
 # list
-### `extend` vs `append`
+### `extend()` vs `append()`
 ```
 a1 = [1, 2]
 a2 = [1, 2]
@@ -51,6 +51,21 @@ a1.extend(b)
 
 # a2 = [1, 2, (3, 4)]
 a2.append(b)
+```
+
+### `insert()`
+```
+vowel = ['a', 'e', 'i', 'u']
+
+# 'o' is inserted at index 3
+# the position of 'o' will be 4th
+vowel.insert(3, 'o')
+```
+
+### `any()`
+Return `true` if at least one item in iterable is `true`
+```
+any(iterable)
 ```
 
 # [logging](https://docs.python.org/3/library/logging.html)
