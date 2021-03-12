@@ -79,6 +79,8 @@ git config --global user.email test@outlook.com
 - **RESET** 
 the modification
    - `git reset`
+ungit a folder
+   - `rm -rf .git`
 
 - **DIFF** 
 files between working directory and staging area(INDEX)
