@@ -170,3 +170,15 @@ def main(argv):
 if __name__ == '__main__':
   app.run(main)
 ```
+
+## [matplotlib.pyplot](https://matplotlib.org/stable/api/pyplot_summary.html)
+```
+from matplotlib import pyplot as plt
+
+fig = plt.figure()
+ax  = fig.add_subplot()
+ax.plot(x, y, label, color)
+```
+
+## [numpy](http://numpy.org)
+### 

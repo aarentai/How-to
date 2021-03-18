@@ -64,6 +64,7 @@ man cd # which ways the cd can be used
 chmod [option] [file]
 chmod u=rwx,g=rx,o=r myfile
 chmod 754 myfile
+chmod 700 -R <directory>
 ```
 >u: "user", g: "group", and o: "other"
 >

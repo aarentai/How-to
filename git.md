@@ -67,6 +67,10 @@ file from staging area(INDEX) to local repo(HEAD)
 your modification to remote
    - `git push origin main`
 
+- **PULL** 
+your modification from remote
+   - `git pull origin main`
+
 - **CONFIG**
    - `git config -e`
    - `git config -e --global`
@@ -79,9 +83,13 @@ git config --global user.email test@outlook.com
 - **RESET** 
 the modification
    - `git reset`
+   - `git reset --soft HEAD~3`, go back 3 versions
 ungit a folder
    - `rm -rf .git`
 
 - **DIFF** 
 files between working directory and staging area(INDEX)
    - `git diff [file]`
+
+- **GREP**
+   - `git grep [keyword]`
