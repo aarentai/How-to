@@ -180,5 +180,32 @@ ax  = fig.add_subplot()
 ax.plot(x, y, label, color)
 ```
 
+### interactive plot
+```
+%matplotlib widget
+```
+
 ## [numpy](http://numpy.org)
 ### 
+
+## [pytorch](http://pytorch.org)
+### `autograd`
+`torch.Tensor` is the central class of the package. If you set its attribute `.requires\_grad` as `True`, it starts to track all operations on it. When you finish your computation you can call `.backward()` and have all the gradients computed automatically. The gradient for this tensor will be accumulated into `.grad` attribute.
+
+To stop a tensor from tracking history, you can call `.detach()` to detach it from the computation history, and to prevent future computation from being tracked.
+
+To prevent tracking history (and using memory), you can also wrap the code block in `with torch.no\_grad():`. This can be particularly helpful when evaluating a model because the model may have trainable parameters with `requires\_grad=True`, but for which we don’t need the gradients.
+
+There’s one more class which is very important for autograd implementation - a `Function`.
+
+`Tensor` and `Function` are interconnected and build up an acyclic graph, that encodes a complete history of computation. Each tensor has a `.grad\_fn` attribute that references a Function that has created the Tensor (except for Tensors created by the user - their `grad\_fn` is `None`).
+
+If you want to compute the derivatives, you can call `.backward()` on a `Tensor`. If Tensor is a scalar (i.e. it holds a one element data), you don’t need to specify any arguments to `backward()`, however if it has more elements, you need to specify a gradient argument that is a tensor of matching shape. 
+
+Typical pipeline:
+```
+x.requires_grad_()
+out = function(x)
+out.backward()
+gradient = x.grad    
+```
