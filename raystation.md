@@ -3,14 +3,14 @@
 Type object name(`plan`) (followed by `.`), then press `Tab`, you can see all the properties and methods of the object.
 
 ## object and method properties
-- Type object name(`plan`) followed by `._`, then press `Enter`, you can get the names of all available properties, object and method of an object. 
-And the suffix indicates the type of the object.
 |        Type          |       Example       |
 |:--------------------:|:-------------------:|
 | object               | `AdaptationTo._`    |
 | method               | `AddNewBeamSet(..)` |
 | list of objects      | `BackupPlans[]._`   |
 | immutable properties | `#IsBackupPlan`     |
+- Type object name(`plan`) followed by `._`, then press `Enter`, you can get the names of all available properties, object and method of an object. 
+And the suffix indicates the type of the object.
 
 - Type object name(`plan`) followed by `._print`, then press `Enter`, you can get the value of each property and the number of items in each list of the object. 
 
