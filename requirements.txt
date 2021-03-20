@@ -10,3 +10,4 @@ simpleitk>=2.0.1
 itkwidgets
 itk
 pyvista
+tqdm
