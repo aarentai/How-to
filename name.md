@@ -12,3 +12,5 @@
 |:----------------------------:|:------------------------------------:|
 | data                         | `lowercase_separated_by_underscores` |
 | other folders, scripts       | `UpperCamelCase`                     |
+
+If the name of `.py` files or folder will appear in the code(not talking about path), then they should be lowercased. Else, they should be UpperCamelCase.
