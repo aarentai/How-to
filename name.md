@@ -8,8 +8,7 @@
 | constants                       | `CAPITALIZED_WITH_UNDERSCORES`       |
 
 ## Files and folders
-|     Object      |                Example               |
-|:---------------:|:------------------------------------:|
-| files           | `lowercase_separated_by_underscores` |
-| package folders | one lower case word: `data`          |
-| other folders   | `UpperCamelCase`                     |
+|            Object            |                Example               |
+|:----------------------------:|:------------------------------------:|
+| data                         | `lowercase_separated_by_underscores` |
+| other folders, scripts       | `UpperCamelCase`                     |
