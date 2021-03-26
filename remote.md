@@ -45,6 +45,13 @@ jupyter notebook
 ```
 ssh hdai@cibcgpu1.sci.utah.edu -L 127.0.0.1:1234:0.0.0.0:9999
 ```
+If the following warning pop up,
+```
+bind [127.0.0.1]:1234: Permission denied
+channel_setup_fwd_listener_tcpip: cannot listen to port: 1234
+Could not request local forwarding.
+```
+then change it to whatever ip which has not been occupied, say `127.0.0.1:4321`.
 7. Open browser and go to
 ```
 http://localhost:1234/
