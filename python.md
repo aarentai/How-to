@@ -1,4 +1,4 @@
-# [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
+## [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
 ### `try`, `except`, `else`, `finally`
 The try statement works as follows.
 - First, the `try` clause (the statement(s) between the `try` and `except` keywords) is executed.
@@ -39,7 +39,7 @@ if not expression:
   raise AssertionError
 ```
 
-# list
+## list
 ### `extend()` vs `append()`
 ```
 a1 = [1, 2]
@@ -68,19 +68,19 @@ Return `true` if at least one item in iterable is `true`
 any(iterable)
 ```
 
-# [logging](https://docs.python.org/3/library/logging.html)
+## [logging](https://docs.python.org/3/library/logging.html)
 ```
 logging.info("\n%s", report)
 ```
 
-# [tqdm](https://tqdm.github.io/)
+## [tqdm](https://tqdm.github.io/)
 ```
 from tqdm import tqdm
 for i in tqdm(range(1000)):
   pass
 ```
 
-# [subprocess](https://docs.python.org/3/library/subprocess.html)
+## [subprocess](https://docs.python.org/3/library/subprocess.html)
 The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
 
 ```
@@ -89,7 +89,7 @@ subprocess.run(["pip3","install","--user","pydicom"])   # -- for word
 subprocess.run(["pip3","install","-u","pydicom"])       # - for letter
 ```
 
-# [glob](https://docs.python.org/3/library/glob.html)
+## [glob](https://docs.python.org/3/library/glob.html)
 Return a list of path names that match pattern.
 
 ```
@@ -106,7 +106,7 @@ Return a list of path names that match pattern.
 ['./', './sub/']
 ```
 
-# [argparse](https://docs.python.org/3/library/argparse.html)
+## [argparse](https://docs.python.org/3/library/argparse.html)
 The `argparse` module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of `sys.argv`.
 
 ```
@@ -127,7 +127,7 @@ parser.add_argument('--train',
 args = parser.parse_args()
 ```
 
-# [os](https://docs.python.org/3/library/os.html)
+## [os](https://docs.python.org/3/library/os.html)
 |         Command         |                   Function                  | Counterpart in shell |
 |:-----------------------:|:-------------------------------------------:|:--------------------:|
 |      `os.getcwd()`      |        Get current working directory        |         `pwd`        |
@@ -148,7 +148,7 @@ args = parser.parse_args()
 
 
 
-# [absl.flag](https://abseil.io/docs/python/guides/flags)
+## [absl.flag](https://abseil.io/docs/python/guides/flags)
 ```
 from absl import app
 from absl import flags
@@ -216,3 +216,80 @@ out = function(x)
 out.backward()
 gradient = x.grad    
 ```
+
+## [itkwidgets](https://pypi.org/project/itkwidgets/0.12.1/)
+Interactive Jupyter widgets to visualize images, point sets, meshes and their combinations on the web.
+
+- `view()`: displays the 2D or 3D scalar field images or point sets.
+```
+import itk
+from itkwidgets import view
+
+image = itk.imread(file_name)
+view(image)                                                                       # 2D image
+view(image, rotate=True, axes=True, vmin=4000, vmax=17000, gradient_opacity=0.9)  # 3D image
+
+import numpy as np
+number_of_points = 3000
+gaussian_1_mean = [0.0, 0.0, 0.0]
+gaussian_1_cov = [[1.0, 0.0, 0.0], [0.0, 2.0, 0.0], [0.0, 0.0, 0.5]]
+point_set_1 = np.random.multivariate_normal(gaussian_1_mean, gaussian_1_cov, number_of_points)
+view(point_sets=[point_set_1])                                                    # 3D point set
+view(image=image, point_sets=[point_set_1])                                       # 3D point set laying over image
+
+from pyvista import examples
+airplane = examples.load_airplane()
+view(geometries=airplane)                                                         # 3D mesh
+view(image=image, geometries=airplane)                                            # 3D mesh laying over image
+```
+
+- `checkerboard()`: overlays one image over another, and visualizes them simultaneously in form of checkerboard. Applicable to both 2D or 3D images.
+```
+import itk
+from itkwidgets import checkboard
+
+image1 = itk.imread(file_name1)
+image2 = itk.imread(file_name2)
+checkerboard(image1, image2, pattern=5)
+```
+
+- `compare()`: compares the two images side by side.
+```
+import itk
+from itkwidgets import compare
+
+image1 = itk.imread(file_name1)
+image2 = itk.imread(file_name2)
+compare(image1, image2, link_cmap=True)
+```
+
+- `line_profile()`: plots intensity along the line begining with point1 and end with point2.
+```
+import itk
+from itkwidgets import line_profile
+
+image = itk.imread(file_name)
+line_profile(image, point1=[35.3, 169.7, 113.6], point2=[325.1, 197.3, 204.6], ui_collapsed=True)
+```
+
+## pyvista
+`pyvista` is mainly used as a mesh generator, and the generated object can be used as the `geometries` argument in `itkwidgets.view`
+```
+import pyvista as pv
+mesh = pv.read('my_strange_vtk_file.vtk')                       # read .vtk file
+```
+
+```
+import pyvista as pv
+spline = pv.Spline(points, 1000)                                # create a plain line object with 1000 interpolation points(numpy array[num, dim])
+tube = spline.tube(radius=0.1)                                  # covert the line object to a tube object
+
+ellipsoid = pv.ParametircEllipsoid((xradius=None, yradius=None, zradius=None, center=None, direction=None))
+
+from itkwidgets import view
+view(image, geometries = [tube, ellipsoid])
+```
+
+## itk
+
+## scikit-image/skimage
