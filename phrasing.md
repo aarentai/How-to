@@ -1,0 +1,18 @@
+- A decade of unprecedented progress in artificial intelligence (AI) has **demonstrated the potential** for many fields—including
+medicine—to benefit from the insights that AI techniques can extract from data.
+- We **start by** briefly summarizing a decade of progress in convolutional neural networks.
+-  The clinical tasks suitable for CV **span** many categories.
+- Medical data access **is central to** this field.
+- This rapid growth has now **reached the point of** directly impacting patient outcomes.
+- Videobased CNNs can **be integrated into** endoscopic procedures.
+- Scientists have **taken this field one step further** by building entire medical AI devices designed for monitoring.
+- Computer vision in radiology is so pronounced that it has quickly **burgeoned into** its own field of research, growing a corpus of work that extends into all modalities, **with a focus on** Xrays, CT, and MRI.
+- Cardiac imaging is increasingly used in **a wide array of** clinical diagnoses and workflows.
+- Pathologists **play a key role** in cancer detection and treatment.
+- This development, **coupled with** advances in CV has led to research and commercialization activity in AI-driven digital histopathology.
+- As medical AI **advances into** the clinic, it will simultaneously **have the power to do great good** for society, and to potentially exacerbate long-standing inequalities and perpetuate errors in medicine.
+- **There exists a need for** unsupervised 3D segmentation on complex volumetric data.
+- In particular, technologies such as MRI and cryo-EM **have led to greater availability** of 3D voxel data.
+- **Our key insight is that** we can utilize a hyperbolic embedding space to learn effective hierarchical representations of voxel regions in 3D images. 
+- In the biomedical domain, there is **an abundance of dense**, complex data where objects of interest may be challenging to detect or constrained by limits of human knowledge.
+- Our choice of source dataset **is motivated by the abundance of benchmark** datasets in the vision field depicting common objects.
