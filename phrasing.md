@@ -1,18 +1,38 @@
-- A decade of unprecedented progress in artificial intelligence (AI) has **demonstrated the potential** for many fields—including
+- A decade of unprecedented progress in artificial intelligence (AI) has <ins>demonstrated the potential</ins> for many fields—including
 medicine—to benefit from the insights that AI techniques can extract from data.
-- We **start by** briefly summarizing a decade of progress in convolutional neural networks.
--  The clinical tasks suitable for CV **span** many categories.
-- Medical data access **is central to** this field.
-- This rapid growth has now **reached the point of** directly impacting patient outcomes.
-- Videobased CNNs can **be integrated into** endoscopic procedures.
-- Scientists have **taken this field one step further** by building entire medical AI devices designed for monitoring.
-- Computer vision in radiology is so pronounced that it has quickly **burgeoned into** its own field of research, growing a corpus of work that extends into all modalities, **with a focus on** Xrays, CT, and MRI.
-- Cardiac imaging is increasingly used in **a wide array of** clinical diagnoses and workflows.
-- Pathologists **play a key role** in cancer detection and treatment.
-- This development, **coupled with** advances in CV has led to research and commercialization activity in AI-driven digital histopathology.
-- As medical AI **advances into** the clinic, it will simultaneously **have the power to do great good** for society, and to potentially exacerbate long-standing inequalities and perpetuate errors in medicine.
-- **There exists a need for** unsupervised 3D segmentation on complex volumetric data.
-- In particular, technologies such as MRI and cryo-EM **have led to greater availability** of 3D voxel data.
-- **Our key insight is that** we can utilize a hyperbolic embedding space to learn effective hierarchical representations of voxel regions in 3D images. 
-- In the biomedical domain, there is **an abundance of dense**, complex data where objects of interest may be challenging to detect or constrained by limits of human knowledge.
-- Our choice of source dataset **is motivated by the abundance of benchmark** datasets in the vision field depicting common objects.
+- We <ins>start by</ins> briefly summarizing a decade of progress in convolutional neural networks.
+- The clinical tasks suitable for CV <ins>span</ins> many categories.
+- Medical data access <ins>is central to</ins> this field.
+- This rapid growth has now <ins>reached the point of</ins> directly impacting patient outcomes.
+- Videobased CNNs can <ins>be integrated into</ins> endoscopic procedures.
+- Scientists have <ins>taken this field one step further</ins> by building entire medical AI devices designed for monitoring.
+- Computer vision in radiology is so pronounced that it has quickly <ins>burgeoned into</ins> its own field of research, growing a corpus of work that extends into all modalities, <ins>with a focus on</ins> Xrays, CT, and MRI.
+
+- Cardiac imaging is increasingly used in <ins>a wide array of</ins> clinical diagnoses and workflows. 
+- Then, say we have <ins>a family of</ins> deterministic functions.
+- In the biomedical domain, there is <ins>an abundance of</ins> dense, complex data where objects of interest may be challenging to detect or constrained by limits of human knowledge.
+
+- Pathologists <ins>play a key role</ins> in cancer detection and treatment.
+- This development, <ins>coupled with</ins> advances in CV has led to research and commercialization activity in AI-driven digital histopathology.
+- As medical AI <ins>advances into</ins> the clinic, it will simultaneously <ins>have the power to do great good</ins> for society, and to potentially exacerbate long-standing inequalities and perpetuate errors in medicine.
+- <ins>There exists a need for</ins> unsupervised 3D segmentation on complex volumetric data.
+- In particular, technologies such as MRI and cryo-EM <ins>have led to greater availability</ins> of 3D voxel data.
+- <ins>Our key insight is that</ins> we can utilize a hyperbolic embedding space to learn effective hierarchical representations of voxel regions in 3D images. 
+- Our choice of source dataset <ins>is motivated by the abundance of benchmark</ins> datasets in the vision field depicting common objects.
+- In the second stage of DARCNN, pseudo-labelling on augmented input <ins>is introduced as</ins> a strong supervisory image-level signal.
+- These advances have <ins>given rise to</ins> promising frameworks which can use backpropagation-based function approximators to build generative models.
+- These characteristics have <ins>contributed to a quick rise</ins> in their popularity.
+- This tutorial <ins>began its life</ins> as a presentation for computer vision reading groups at UC Berkeley and Carnegie Mellon. 
+- <ins>That is</ins>, before our model draws anything, it first randomly samples a digit value.
+- <ins>It helps</ins> if the model first decides which character to generate before it assigns a value to any specific pixel.
+- <ins>As is common in machine learning</ins>, ...
+- It needs to choose <ins>not just</ins> the digit, <ins>but</ins> the angle that the digit is drawn, the stroke width, and also abstract stylistic properties.
+- <ins>We are aiming</ins> maximize the probability of each X in the training set under the entire generative process.
+- <ins>The intuition behind this framework</ins>, called “maximum likelihood”, ...
+- <ins>From here onward</ins>, we will omit θ from f(z; θ) to avoid clutter.
+- <ins>This problem only makes sense</ins> if the pile to be created has the same mass as the pile to be moved; therefore <ins>without loss of generality</ins> assume that ...
+- Let us do a couple of simple experiments to answer these questions and <ins>shed some light on</ins> comparative usefulness of both techniques.
+- Autoencoder <ins>is prone to</ins> overfitting due to high number of parameters.
+- It <ins>is constituted by</ins> two main parts: an encoder that maps the input into the code, and a decoder that maps the code to a reconstruction of the input.
+- The efficiency <ins>stems from</ins> a solution formula for ϕ that is explicit up to inversion of the Laplace operator.
+- The 2D Poisson’s equation <ins>reads as</ins>...

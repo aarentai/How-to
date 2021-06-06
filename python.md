@@ -38,6 +38,12 @@ is equivalent to
 if not expression:
   raise AssertionError
 ```
+### `yield`
+Analogous to `return`, but won't stop at the first `yield`
+```
+yield a           
+yield from [a, b, c]
+``` 
 
 ## list
 ### `extend()` vs `append()`
@@ -78,6 +84,25 @@ logging.info("\n%s", report)
 from tqdm import tqdm
 for i in tqdm(range(1000)):
   pass
+```
+
+## file handle
+### write
+| Parameter |  Mode  |                            Operations                            |
+|:---------:|:------:|:----------------------------------------------------------------:|
+| 'w'       | write  | will overwrite any existing content, and create it if not exists |
+| 'a'       | append | will append to the end of the file, and create it if not exists  |
+| 'x'       | create | create a file, returns an error if the file exist                |
+```
+with open(path, 'w') as f:
+  f.write()
+```
+
+### read
+```
+with open(path, 'r') as f:
+  f.read()
+  f.readline()
 ```
 
 ## [subprocess](https://docs.python.org/3/library/subprocess.html)
@@ -272,7 +297,7 @@ image = itk.imread(file_name)
 line_profile(image, point1=[35.3, 169.7, 113.6], point2=[325.1, 197.3, 204.6], ui_collapsed=True)
 ```
 
-## pyvista
+## [pyvista](https://docs.pyvista.org/index.html)
 `pyvista` is mainly used as a mesh generator, and the generated object can be used as the `geometries` argument in `itkwidgets.view`
 ```
 import pyvista as pv
@@ -290,6 +315,6 @@ from itkwidgets import view
 view(image, geometries = [tube, ellipsoid])
 ```
 
-## itk
+## [itk](https://itkpythonpackage.readthedocs.io/en/master/Quick_start_guide.html#usage)
 
-## scikit-image/skimage
+## [skimage](https://scikit-image.org/docs/stable/api/api.html)

@@ -92,3 +92,8 @@ gcc assignment1.c -o assignment1
 make
 ./tester
 ```
+### Run python background
+```
+nohup python BrainAtlasBuilding3D.py &> output_brain3.log
+kill -9 pid
+```
