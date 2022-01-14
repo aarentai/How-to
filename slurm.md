@@ -27,11 +27,11 @@ conda activate pytorch17
 which python
 python /home/sci/hdai/Projects/MetCnn3D/MetCnnBrainPatchedSlice.py
 ```
-Remark:
-1.`#SBATCH -J metcnn` sets job name
-2.`#SBATCH -t 72:00:00` sets running time limit
-3.`#SBATCH -o output_dgx.out` designates the output log
-4.`#SBATCH --gres=gpu:2` is for designating how many gpus you intend to use
+Remarks:
+1. `#SBATCH -J metcnn` sets job name;
+2. `#SBATCH -t 72:00:00` sets running time limit;
+3. `#SBATCH -o output_dgx.out` designates the output log;
+4. `#SBATCH --gres=gpu:2` is for designating how many GPUs you intend to use - take as you need.
 
 ### sbatch
 Submit a job by
