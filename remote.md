@@ -62,3 +62,8 @@ http://localhost:1234/
 1. Make sure your PyCharm is professional version
 2. `File`->`Setting`->`Project`->`Python Interpreter`->`Add python interpreter`->`SSH interpreter`->`New server configuration`
 
+
+## Add new kernel for jupyter notebook after create new conda environment
+```
+python -m ipykernel install --user --name [name of new environment] --display-name ['name you want to display in notebook']
+```

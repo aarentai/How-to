@@ -36,3 +36,5 @@ medicine—to benefit from the insights that AI techniques can extract from data
 - It <ins>is constituted by</ins> two main parts: an encoder that maps the input into the code, and a decoder that maps the code to a reconstruction of the input.
 - The efficiency <ins>stems from</ins> a solution formula for ϕ that is explicit up to inversion of the Laplace operator.
 - The 2D Poisson’s equation <ins>reads as</ins>...
+- The fundamental purpose of scientific discourse <ins>is not the mere</ins> presentation of information and thought, <ins>but rather</ins> its actual communication.
+- <ins>It does not matter</ins> how pleased an author might be to have converted all the right data into sentences and paragraphs; <ins>it matters only</ins> whether a large majority of the reading audience accurately perceives what the author had in mind.

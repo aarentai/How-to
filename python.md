@@ -156,7 +156,7 @@ args = parser.parse_args()
 |         Command         |                   Function                  | Counterpart in shell |
 |:-----------------------:|:-------------------------------------------:|:--------------------:|
 |      `os.getcwd()`      |        Get current working directory        |         `pwd`        |
-| `os.makedir("path/to")` |              Create a directory             |        `mkdir`       |
+| `os.mkdir("path/to")` |              Create a directory             |        `mkdir`       |
 |  `os.chdir("path/to")`  |     Change the current working directory    |         `cd`         |
 |  `os.rmdir("path/to")`  |              Remove a directory             |        `rmdir`       |
 | `os.listdir("path/to")` | Return a list of all file or directories under the path |         `ls`         |

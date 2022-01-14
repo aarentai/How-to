@@ -38,6 +38,15 @@ git mv [oldfile] [newfile]
 git commit -m ""
 git push origin main
 ```
+## pull the edited version from remote and merge with local versions
+```
+git stash
+git pull
+// if failed due to conflict
+git mergetool
+:diffg LO
+git pull origin main
+```
 ----
 - **INIT**
    - `git init repo_name`

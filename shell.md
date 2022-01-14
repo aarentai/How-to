@@ -1,3 +1,5 @@
+### Quit
+Press `q`
 ### Show files
 ```
 ls
@@ -96,4 +98,16 @@ make
 ```
 nohup python BrainAtlasBuilding3D.py &> output_brain3.log
 kill -9 pid
+```
+### Check running processes
+```
+top (-u hdai)
+```
+### Check folder size
+```
+du -h --max-depth=1
+```
+### 
+```
+ping/source/echo
 ```

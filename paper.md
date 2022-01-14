@@ -16,7 +16,7 @@
  - Evaluation metrics
  - Comparison with state-of-the-art
  - Detailed analysis
-    - Althernative design choice exploration
+    - Alternative design choice exploration
     - Ablation studies
     - Visualization examples
 ## Conclusion and Future Work
