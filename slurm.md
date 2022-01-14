@@ -40,8 +40,12 @@ where `run.slurm` is the script above.
 
 ### scancel
 Kill a job by
-```scancel $JOBID```
+```scancel $JOB_ID```
 
 ### squeue
 List jobs by
-`squeue -u hdai`
+```squeue -u hdai```
+
+### scontrol
+Read detail of a job by
+```scontrol show job $JOB_ID```
