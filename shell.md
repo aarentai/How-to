@@ -111,3 +111,7 @@ du -h --max-depth=1
 ```
 ping/source/echo
 ```
+### Check login history
+```
+last -f /var/log/wtmp
+```

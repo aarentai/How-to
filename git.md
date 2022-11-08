@@ -68,6 +68,7 @@ file from working directory to staging area(INDEX)
 file from staging area(INDEX) to local repo(HEAD)
    -  `git commit -m [remark]`
    -  `git commit [file1] [file2] -m [remark]`
+   -  `git commit --amend`
 
 - **BRANCH**
 
@@ -75,6 +76,8 @@ file from staging area(INDEX) to local repo(HEAD)
 - **PUSH** 
 your modification to remote
    - `git push origin main`
+overwrite the remote repo with local
+   - `git push -f origin main`
 
 - **PULL** 
 your modification from remote

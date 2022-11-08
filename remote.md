@@ -67,3 +67,9 @@ http://localhost:1234/
 ```
 python -m ipykernel install --user --name [name of new environment] --display-name ['name you want to display in notebook']
 ```
+
+## SSH without password
+```
+ssh-keygen -t ed25519
+```
+paste the .pub into /home/sci/hdai/.ssh/authorized_keys
