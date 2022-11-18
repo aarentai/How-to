@@ -74,6 +74,83 @@ Return `true` if at least one item in iterable is `true`
 any(iterable)
 ```
 
+## [torch](https://pytorch.org/docs/stable/)
+### Monitering memory usage
+```
+torch.cuda.memory_summary(device=f'cuda:0')
+```
+
+### Checkpoint the model to save memory
+```
+modules = [module for k, module in self._modules.items()][0]
+output = torch.utils.checkpoint.checkpoint_sequential(modules, len(modules), x)
+```
+
+### Model parallel
+```
+class ToyModel(nn.Module):
+    def __init__(self):
+        super(ToyModel, self).__init__()
+        self.net1 = torch.nn.Linear(10, 10).to('cuda:0')
+        self.relu = torch.nn.ReLU()
+        self.net2 = torch.nn.Linear(10, 5).to('cuda:1')
+
+    def forward(self, x):
+        x = self.relu(self.net1(x.to('cuda:0')))
+        return self.net2(x.to('cuda:1'))
+```
+
+### Data parallel
+```
+net = torch.nn.DataParallel(model, device_ids=[0, 1, 2])
+output = net(input_var)  # input_var can be on any device, including CPU
+```
+
+### Distributed data parallel
+```
+import torch
+import torch.distributed as dist
+import torch.multiprocessing as mp
+import torch.nn as nn
+import torch.optim as optim
+from torch.nn.parallel import DistributedDataParallel as DDP
+
+
+def example(rank, world_size):
+    # create default process group
+    dist.init_process_group("gloo", rank=rank, world_size=world_size)
+    # create local model
+    model = nn.Linear(10, 10).to(rank)
+    # construct DDP model
+    ddp_model = DDP(model, device_ids=[rank])
+    # define loss function and optimizer
+    loss_fn = nn.MSELoss()
+    optimizer = optim.SGD(ddp_model.parameters(), lr=0.001)
+
+    # forward pass
+    outputs = ddp_model(torch.randn(20, 10).to(rank))
+    labels = torch.randn(20, 10).to(rank)
+    # backward pass
+    loss_fn(outputs, labels).backward()
+    # update parameters
+    optimizer.step()
+
+def main():
+    world_size = 2
+    mp.spawn(example,
+        args=(world_size,),
+        nprocs=world_size,
+        join=True)
+
+if __name__=="__main__":
+    # Environment variables which need to be
+    # set when using c10d's default "env"
+    # initialization mode.
+    os.environ["MASTER_ADDR"] = "localhost"
+    os.environ["MASTER_PORT"] = "29500"
+    main()
+```
+
 ## [logging](https://docs.python.org/3/library/logging.html)
 ```
 logging.info("\n%s", report)

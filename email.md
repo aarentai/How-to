@@ -1,11 +1,11 @@
-## INCOMING MAIL SERVER
+## Incomming Mail Server
 | Field              | Value             |
 |--------------------|-------------------|
 | Protocol           | IMAP SSL/TLS      |
 | Server Name        | mail.sci.utah.edu |
 | Incoming IMAP Port | 993               |
 
-## OUTGOING MAIL SERVER
+## Outgoing Mail Server
 | Field              | Value             |
 |--------------------|-------------------|
 | Protocol           | SMTP SSL/TLS      |
