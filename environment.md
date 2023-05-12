@@ -1,6 +1,10 @@
 ### Overview
 Environment variables are dynamic values which affect the processes or programs on a computer. Environment variables can be created, edited, saved, and deleted and give information about the system behavior. It can influences how running computer processes behave.
 
+`.bashrc` defines the settings for a user **when running a subshell**. Add custom configurations to this file to make parameters available in subshells for a specific user.
+
+`.bash_profile` defines the settings for a user **when running a login shell**. Add custom configurations to this file to make parameters available to a specific user when running a login shell.
+
 ### Common Environment Variable
 |      Variable      |                                                                                                                             Description                                                                                                                             |                                                                                              Example                                                                                              |
 |:------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -13,4 +17,4 @@ Environment variables are dynamic values which affect the processes or programs 
 ### Environment Variable Assignment
 ```
 export VARIABLE=value
-```                                                                   |
+```

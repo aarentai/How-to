@@ -75,18 +75,18 @@ any(iterable)
 ```
 
 ## [torch](https://pytorch.org/docs/stable/)
-### Monitering memory usage
+### [Monitering memory usage](https://pytorch.org/docs/stable/generated/torch.cuda.memory_summary.html)
 ```
 torch.cuda.memory_summary(device=f'cuda:0')
 ```
 
-### Checkpoint the model to save memory
+### [Checkpoint the model to save memory](https://pytorch.org/docs/stable/checkpoint.html)
 ```
 modules = [module for k, module in self._modules.items()][0]
 output = torch.utils.checkpoint.checkpoint_sequential(modules, len(modules), x)
 ```
 
-### Model parallel
+### [Model parallel](https://pytorch.org/tutorials/intermediate/model_parallel_tutorial.html)
 ```
 class ToyModel(nn.Module):
     def __init__(self):
@@ -100,13 +100,28 @@ class ToyModel(nn.Module):
         return self.net2(x.to('cuda:1'))
 ```
 
-### Data parallel
+### [Pipeline parallel](https://pytorch.org/docs/stable/pipeline.html?highlight=data+parallel)
+```
+# Need to initialize RPC framework first.
+os.environ['MASTER_ADDR'] = 'localhost'
+os.environ['MASTER_PORT'] = '29500'
+torch.distributed.rpc.init_rpc('worker', rank=0, world_size=1)
+# Build pipe.
+fc1 = nn.Linear(16, 8).cuda(0)
+fc2 = nn.Linear(8, 4).cuda(1)
+model = nn.Sequential(fc1, fc2)
+model = Pipe(model, chunks=8)
+input = torch.rand(16, 16).cuda(0)
+output_rref = model(input)
+```
+
+### [Data parallel](https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html?highlight=model+parallel)
 ```
 net = torch.nn.DataParallel(model, device_ids=[0, 1, 2])
 output = net(input_var)  # input_var can be on any device, including CPU
 ```
 
-### Distributed data parallel
+### [Distributed data parallel](https://pytorch.org/docs/stable/notes/ddp.html?highlight=ddp)
 ```
 import torch
 import torch.distributed as dist
@@ -149,6 +164,25 @@ if __name__=="__main__":
     os.environ["MASTER_ADDR"] = "localhost"
     os.environ["MASTER_PORT"] = "29500"
     main()
+```
+
+### [Automatic mixed precision package](https://pytorch.org/docs/stable/amp.html)
+```
+# Creates model and optimizer in default precision
+model = Net().cuda()
+optimizer = optim.SGD(model.parameters(), ...)
+
+for input, target in data:
+    optimizer.zero_grad()
+
+    # Enables autocasting for the forward pass (model + loss)
+    with autocast():
+        output = model(input)
+        loss = loss_fn(output, target)
+
+    # Exits the context manager before backward()
+    loss.backward()
+    optimizer.step()
 ```
 
 ## [logging](https://docs.python.org/3/library/logging.html)

@@ -29,6 +29,7 @@ echo $SHELL
 ```
 
 ### Launch a batch of process with different arguments in shell(bash) script
+**When defining the variable in bash script, do not leave space around the equal sign!!**
 ```
 #!/usr/bin/env bash
 
@@ -42,8 +43,10 @@ python /home/sci/hdai/Projects/MetCnn2D/TestMultiProcessing.py --brain_id=$i  --
 done
 ```
 
-### Quit
-Press `q`
+### Clear the terminal
+```
+clear
+```
 
 ### Show files
 ```

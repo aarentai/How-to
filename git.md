@@ -22,7 +22,8 @@ git push origin main
 git init
 git add .
 git commit -m "first commit"
-git remote add origin https://github.com/aarentai/Atlas2D.git
+<!-- use ssh rather than https -->
+git remote add origin git@github.com:aarentai/Metric-Nn-3D.git
 git branch -M main
 git push -u origin main
 ```
@@ -78,6 +79,30 @@ your modification to remote
    - `git push origin main`
 overwrite the remote repo with local
    - `git push -f origin main`
+If you've correctly added your SSH key to your GitHub account, it should allow you to authenticate without a password when you push changes to a repository. However, there are a few reasons why you might still be prompted for a password:
+
+   - Check that you're using the correct URL for the repository. If you're using the HTTPS URL instead of the SSH URL, you'll still be prompted for a password. To check the URL, go to your repository on GitHub, click on the green "Code" button, and make sure that "SSH" is selected.
+
+   - Make sure that your local repository is using the SSH URL. If you've previously cloned the repository using the HTTPS URL, you'll need to update the remote URL to use SSH. You can do this using the `git remote set-url` command, like this:
+
+   ```
+   git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+   ```
+
+   Replace "USERNAME" and "REPOSITORY" with your GitHub username and the name of the repository you're working with.
+
+   - Check that your SSH key is being used. When you run the `ssh` command, you should see a message like "Welcome to GitHub, USERNAME!" If you don't see this message, it means that your SSH key is not being used and you're being prompted for a password.
+
+   - If you're still having issues, try restarting your SSH agent. Run the following commands in your terminal:
+
+   ```
+   eval "$(ssh-agent -s)"
+   ssh-add
+   ```
+
+   This will start the SSH agent and add your SSH key. Then try pushing your changes again.
+
+   If you're still having issues, you can check the GitHub documentation on troubleshooting SSH connectivity issues: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/troubleshooting-ssh.
 
 - **PULL** 
 your modification from remote
