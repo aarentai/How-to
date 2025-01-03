@@ -356,6 +356,12 @@ gradient = x.grad
 ## [itkwidgets](https://pypi.org/project/itkwidgets/0.12.1/)
 Interactive Jupyter widgets to visualize images, point sets, meshes and their combinations on the web.
 
+If `view()` cannot show anything, use the following command to solve:
+```
+jupyter nbextension install --py itkwidgets --user
+jupyter nbextension enable --py itkwidgets
+```
+
 - `view()`: displays the 2D or 3D scalar field images or point sets.
 ```
 import itk

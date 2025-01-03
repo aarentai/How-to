@@ -73,3 +73,10 @@ python -m ipykernel install --user --name [name of new environment] --display-na
 ssh-keygen -t ed25519
 ```
 paste the .pub into /home/sci/hdai/.ssh/authorized_keys
+
+## VScode remote from browser
+
+mkdir -p tunnel && cd tunnel
+curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
+tar -xf vscode_cli.tar.gz
+./code tunnel
